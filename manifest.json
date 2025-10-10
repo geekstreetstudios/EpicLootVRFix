@@ -1,0 +1,17 @@
+{
+  "name": "EpicLootVRFix",
+  "version_number": "1.0.0",
+  "description": "Makes Epic Loot's Enchanter Table UI visible and functional in Valheim VR",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2200",
+    "ValheimVRMod 0.9.20"
+  ],
+  "website_url": "https://github.com/geekstreetstudios/EpicLootVRFix/tree/main",
+  "namespace": "EpicLootVRFix",
+  "authors": [
+    {
+      "name": "enifleR",
+      "url": "https://github.com/geekstreetstudios"
+    }
+  ]
+}
