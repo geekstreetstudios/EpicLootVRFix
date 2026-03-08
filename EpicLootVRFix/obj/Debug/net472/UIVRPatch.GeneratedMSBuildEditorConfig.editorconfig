@@ -1,5 +1,8 @@
 is_global = true
 build_property.RootNamespace = UIVRPatch
-build_property.ProjectDir = F:\Valheim Mod 2025\EpicLootVRFix\EpicLootVRFix\
+build_property.ProjectDir = G:\Projects\Valheim\EpicLootVRFix\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

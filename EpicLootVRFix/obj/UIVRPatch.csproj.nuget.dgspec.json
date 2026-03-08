@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Valheim Mod 2025\\EpicLootVRFix\\EpicLootVRFix\\UIVRPatch.csproj": {}
+    "G:\\Projects\\Valheim\\EpicLootVRFix\\UIVRPatch.csproj": {}
   },
   "projects": {
-    "F:\\Valheim Mod 2025\\EpicLootVRFix\\EpicLootVRFix\\UIVRPatch.csproj": {
+    "G:\\Projects\\Valheim\\EpicLootVRFix\\UIVRPatch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Valheim Mod 2025\\EpicLootVRFix\\EpicLootVRFix\\UIVRPatch.csproj",
+        "projectUniqueName": "G:\\Projects\\Valheim\\EpicLootVRFix\\UIVRPatch.csproj",
         "projectName": "EpicLootVRFix",
-        "projectPath": "F:\\Valheim Mod 2025\\EpicLootVRFix\\EpicLootVRFix\\UIVRPatch.csproj",
-        "packagesPath": "C:\\Users\\John Lock\\.nuget\\packages\\",
-        "outputPath": "F:\\Valheim Mod 2025\\EpicLootVRFix\\EpicLootVRFix\\obj\\",
+        "projectPath": "G:\\Projects\\Valheim\\EpicLootVRFix\\UIVRPatch.csproj",
+        "packagesPath": "C:\\Users\\themu\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\Valheim\\EpicLootVRFix\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\John Lock\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\themu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,12 +37,13 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

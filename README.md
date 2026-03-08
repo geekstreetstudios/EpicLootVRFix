@@ -1,24 +1,40 @@
 # EpicLoot VR Fix
 
-A Valheim VR mod that makes the EpicLoot Enchanter Table UI visible and functional in Valheim VR (VHVR).
+A Valheim VR mod that fixes EpicLoot UI compatibility issues with Valheim VR (VHVR).
 
 ## Description
 
-This mod fixes the compatibility issue between EpicLoot and Valheim VR Mod (VHVR) where the Enchanter Table UI would not render properly in VR. It automatically detects when the Enchanter Table UI opens and integrates it with VHVR's rendering system, making enchanting items possible in VR gameplay.
+This mod fixes compatibility issues between **EpicLoot** and **Valheim VR Mod (VHVR)** where certain UI elements would not render correctly in VR.
+
+Originally the mod fixed the **Enchanter Table UI**, but it now also fixes **EpicLoot item tooltips**, which were invisible in VR due to the way EpicLoot constructs its tooltip UI.
+
+The mod uses Harmony patching to automatically adjust the UI hierarchy and rendering layers so that VHVR can correctly display these interfaces in VR.
 
 ## Features
 
-- **Automatic UI Detection**: Detects when EpicLoot's Enchanter Table UI opens
-- **VR Rendering Integration**: Forces the UI to render properly in VR using VHVR's rendering system
-- **VR Controller Support**: Use VR menu/inventory buttons to close the UI
-- **Proper Scaling**: Maintains correct UI scaling and positioning for VR
-- **Safe Integration**: Clean integration with VHVR's existing VR GUI system
+- **Automatic UI Detection**  
+  Detects when EpicLoot UI elements appear and ensures they are VR-compatible.
+
+- **Enchanter Table VR Fix**  
+  Ensures the EpicLoot Enchanter Table UI renders correctly in VR.
+
+- **Tooltip Rendering Fix**  
+  Fixes EpicLoot item tooltips that were previously invisible in VR.
+
+- **VR Rendering Integration**  
+  Ensures UI elements are correctly integrated with VHVR's VR GUI system.
+
+- **VR Controller Support**  
+  Allows normal VR interaction with EpicLoot UI.
+
+- **Proper UI Layer Handling**  
+  Ensures UI elements use the correct rendering layer required by VHVR.
 
 ## Installation
 
-1. Install [BepInEx]
-2. Install [Valheim VR Mod (VHVR)]
-3. Install [Epic Loot]
+1. Install **BepInEx**
+2. Install **Valheim VR Mod (VHVR)**
+3. Install **EpicLoot**
 4. Install this mod
 5. Launch the game
 
@@ -26,36 +42,33 @@ This mod fixes the compatibility issue between EpicLoot and Valheim VR Mod (VHVR
 
 The mod includes a config file with the following options:
 
-- `Enable VR Fix` (default: true) - Enable/disable the VR UI fixes
-- `Debug Mode` (default: false) - Enable debug logging for troubleshooting
+- `Enable VR Fix` (default: true)  
+  Enables or disables the VR UI fixes.
 
-To modify config values, edit `BepInEx/config/EpicLootVRFix.cfg` or use the configuration manager mod.
+- `Debug Mode` (default: false)  
+  Enables detailed logging for troubleshooting.
 
-## Usage
+The config file is located at: `BepInEx/config/EpicLootVRFix.cfg`
 
-1. Play Valheim in VR with EpicLoot installed
-2. Approach an Enchanter Table and interact with it
-3. The UI should now be visible and properly positioned in VR
-4. Use your VR controller's menu or inventory button to close the UI
 
 ## Compatibility
 
-- Requires Valheim VR Mod (VHVR)
-- Soft dependency on EpicLoot (mod will only activate if Epic Loot is present)
-- Compatible with other UI mods that don't conflict with Epic Loot or VHVR
+- Requires **Valheim VR Mod (VHVR)**
+- Soft dependency on **EpicLoot**
+- Should not conflict with other UI mods
 
 ## Troubleshooting
 
-If the Enchanter Table UI is not visible:
+If UI elements are not visible in VR:
 
-1. Ensure all dependencies are installed correctly
-2. Check that EpicLoot is functioning in non-VR mode
-3. Enable Debug Mode in the config file to see detailed logs
-4. Check the BepInEx log for any error messages
+1. Ensure all dependencies are installed correctly.
+2. Verify that EpicLoot works correctly in non-VR mode.
+3. Enable **Debug Mode** in the config file.
+4. Check the **BepInEx log** for messages from `EpicLootVRFix`.
 
 ## Source Code
 
-The source code for this mod is available and uses Harmony patching for safe integration with both Epic Loot and VHVR.
+This mod uses **Harmony patching** to safely integrate with both EpicLoot and the Valheim VR Mod without modifying either mod directly.
 
 ## Changelog
 
@@ -64,3 +77,9 @@ The source code for this mod is available and uses Harmony patching for safe int
 - Basic VR UI rendering fix
 - VR controller input support
 - Configurable debug mode
+
+### v1.0.1
+- Fixed EpicLoot tooltip rendering in VR (Tested with EpicLoot v0.12.11)
+- Removed nested tooltip canvas created by Jotunn
+- Corrected UI layer so VHVR can render tooltip text
+

@@ -3,10 +3,9 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[BepInPlugin("EpicLootVRFix", "Epic Loot VR Fix", "1.0.0")]
+[BepInPlugin("EpicLootVRFix", "Epic Loot VR Fix", "1.0.1")]
 [BepInDependency("randyknapp.mods.epicloot", BepInDependency.DependencyFlags.SoftDependency)]
 public class UIVRPatch : BaseUnityPlugin
 {
@@ -28,6 +27,10 @@ public class UIVRPatch : BaseUnityPlugin
         if (EnableVRFix.Value)
         {
             _harmony = new Harmony("EpicLootVRFix");
+
+            // Patch alle Harmony patches i assembly
+            _harmony.PatchAll();
+
             StartCoroutine(WaitForEpicLootAndPatch());
         }
     }
@@ -45,6 +48,7 @@ public class UIVRPatch : BaseUnityPlugin
         }
 
         LogInfo("EpicLoot detected! Applying VR fixes...");
+
         EpicLootVRUI.PatchEpicLootUI(_harmony);
     }
 
@@ -66,7 +70,6 @@ public class UIVRPatch : BaseUnityPlugin
 
     public static void LogError(string message)
     {
-        // Always log errors, even when debug mode is off
         Instance.Logger.LogError(message);
     }
 }
