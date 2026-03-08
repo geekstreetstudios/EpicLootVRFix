@@ -1,6 +1,6 @@
 {
   "name": "EpicLootVRFix",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "description": "Makes EpicLoot's Tooltip and Enchanter Table UI visible and functional in Valheim VR",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2333",
@@ -14,4 +14,5 @@
       "url": "https://github.com/geekstreetstudios"
     }
   ]
+
 }
